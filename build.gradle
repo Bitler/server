@@ -1,0 +1,19 @@
+repositories {
+   mavenLocal()
+   mavenCentral()                                              
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'jetty'
+
+jettyRun { httpPort = 8090 }
+
+dependencies {
+	providedCompile 'javax.servlet:servlet-api:2.5'
+	compile 'org.springframework:spring-webmvc:3.2.2.RELEASE',
+	'com.sun.jersey:jersey-client:1.18.1',
+	'com.sun.jersey.contribs:jersey-spring:1.18.1'
+	'com.sun.jersey:jersey-bundle:1.18.1'
+	'com.sun.jersey:jersey-json:1.18.1'
+
+}
